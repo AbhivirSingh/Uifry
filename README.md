@@ -36,7 +36,7 @@ Uifry is licensed under the MIT License. See the [LICENSE](LICENSE) file for mor
 
 ## Contact
 
-If you have any questions, suggestions, or feedback, feel free to reach out to Abhivir Singh at [abhivirsingh@example.com](mailto:abhivirsingh@example.com).
+If you have any questions, suggestions, or feedback, feel free to reach out to Abhivir Singh at [abhivir2005@gmail.com](mailto:abhivir2005@gmail.com).
 
 ---
 
