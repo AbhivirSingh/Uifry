@@ -109,6 +109,18 @@
             background-color: #f55;
         }
 
+        .star1 {
+            position: absolute;
+            top: 120px;
+            left: 120px;
+        }
+
+        .star2 {
+            position: absolute;
+            top: 50px;
+            right: 40px;
+        }
+
         .hero {
             display: flex;
             justify-content: center;
@@ -194,7 +206,14 @@
         }
 
         .clip {
+            position: relative;
             margin-top: 4em;
+        }
+
+        .clip .star1 {
+            position: absolute;
+            top: 60px;
+            left: 120px;
         }
 
         .a {
@@ -330,6 +349,13 @@
             position: relative;
         }
 
+        .phones .star1 {
+            position: absolute;
+            top: 575px;
+            left: 40px;
+            transform: rotate(30deg);
+        }
+
         .curves {
             display: grid;
             grid-template-rows: 40px 40px;
@@ -391,6 +417,11 @@
             justify-content: end; */
             width: 50%;
             position: relative;
+        }
+
+        .feature1 .star1 {
+            top: 100px;
+            left: -100px;
         }
 
         .feature1 img {
@@ -516,10 +547,6 @@
             height: max-content;
         }
 
-        main .advantages:nth-child(2) {
-            width: 70%
-        }
-
         .advantage1,
         .advantage4 {
             display: flex;
@@ -606,6 +633,21 @@
 
         .advantage4 {
             padding-top: 12rem;
+        }
+
+        .advantage2 .star2 {
+            top: 0px;
+            right: -400px;
+        }
+
+        .advantage3 .star1 {
+            top: -30px;
+            left: 500px;
+        }
+
+        .advantage4 .star2 {
+            top: 600px;
+            right: -100px;
         }
 
         .testimonial {
@@ -706,6 +748,11 @@
             text-align: left;
         }
 
+        .testimonial .sec1 .star1 {
+            top: -500px;
+            left: -80px;
+        }
+
         .people {
             display: flex;
             align-items: center;
@@ -715,6 +762,68 @@
 
         .sec2 p:last-child {
             font-weight: 600;
+        }
+
+        .faq {
+            width: 76%;
+            margin: 4rem 12%;
+            display: flex;
+            flex-direction: column;
+            padding: 4rem 0;
+            position: relative;
+        }
+
+        .faq .star2 {
+            top: 130px;
+            right: 500px;
+        }
+
+        .faq h3 {
+            font-size: 18px;
+            color: #FF5555;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .faq h2 {
+            width: 31rem;
+            margin: 0;
+            margin-bottom: 20px;
+            font-size: 48px;
+            font-weight: 900;
+        }
+
+        .mainfaq {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .mainfaq .div1 {
+            color: #fff;
+            background-color: #f55;
+            border-radius: 8px;
+        }
+
+        .mainfaq .div1,
+        .mainfaq .div2 {
+            padding: 10px 38px;
+        }
+
+        .mainfaq h5 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            width: 474px;
+            font-weight: 600;
+            font-size: 30px;
+        }
+
+        .mainfaq p {
+            margin: 0;
+            margin-bottom: 1.5rem;
+            font-weight: 450;
+            font-size: 20px;
+            text-align: justify;
         }
 
         .readytostart {
@@ -833,6 +942,7 @@
             justify-content: center;
             align-items: center;
             position: relative;
+            transition: 0.3s;
         }
 
         .readytostart .curves:nth-of-type(1) {
@@ -854,63 +964,32 @@
             border-color: white;
         }
 
-        .faq {
-            width: 76%;
-            margin: 4rem 12%;
-            display: flex;
-            flex-direction: column;
-            padding: 4rem 0;
+        .readytostart .star1 {
+            top: 100px;
+            left: -120px;
         }
 
-        .faq h3 {
-            font-size: 18px;
-            color: #FF5555;
-            font-weight: 600;
-            margin: 0;
+        .readytostart .star2 {
+            z-index: 4;
+            top: -80px;
+            right: -130px;
         }
 
-        .faq h2 {
-            width: 31rem;
-            margin: 0;
-            margin-bottom: 20px;
-            font-size: 48px;
-            font-weight: 900;
+        .readytostart .star3 {
+            position: absolute;
+            bottom: 120px;
+            left: 430px;
         }
 
-        .mainfaq {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-        }
-
-        .mainfaq .div1 {
-            color: #fff;
-            background-color: #f55;
-            border-radius: 8px;
-        }
-
-        .mainfaq .div1,
-        .mainfaq .div2 {
-            padding: 10px 38px;
-        }
-
-        .mainfaq h5 {
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-            width: 474px;
-            font-weight: 600;
-            font-size: 30px;
-        }
-
-        .mainfaq p {
-            margin: 0;
-            margin-bottom: 1.5rem;
-            font-weight: 450;
-            font-size: 20px;
-            text-align: justify;
+        .readytostart .star4 {
+            position: absolute;
+            right: 420px;
+            top: 40px;
         }
 
         footer {
+            position: relative;
+            z-index: 4;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1022,6 +1101,11 @@
             font-family: "Clash Display", sans-serif;
             font-size: 1rem;
             font-weight: 400;
+            transition: 0.3s;
+        }
+        
+        .newsletter form button:hover{
+            background-color: #f55;
         }
 
         footer hr {
@@ -1061,6 +1145,17 @@
         <button>Download</button>
     </header>
     <main>
+        <svg class="star1" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M40.9117 4.97056L25.8375 21.6408L45.3253 32.8369L24.8128 23.6519L20.1867 45.6456L22.5835 23.2988L0.236642 25.6956L22.2304 21.0695L13.0454 0.556969L24.2415 20.0448L40.9117 4.97056Z"
+                fill="black" />
+        </svg>
+        <svg class="star2" width="62" height="58" viewBox="0 0 62 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M31 0L32.5047 29.9289L61.4338 22.1115L33.4347 32.7911L49.8091 57.8885L31 34.56L12.1909 57.8885L28.5653 32.7911L0.566191 22.1115L29.4953 29.9289L31 0Z"
+                fill="black" />
+        </svg>
+
         <div class="hero">
             <div class="subhero">
                 <h2>Make The <span class="red"></span><span class="yellow"></span>Best Financial Decisions</h2>
@@ -1085,6 +1180,12 @@
                     </div>
                 </div>
                 <div class="clip">
+                    <svg class="star1" width="46" height="46" viewBox="0 0 46 46" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M40.9117 4.97056L25.8375 21.6408L45.3253 32.8369L24.8128 23.6519L20.1867 45.6456L22.5835 23.2988L0.236642 25.6956L22.2304 21.0695L13.0454 0.556969L24.2415 20.0448L40.9117 4.97056Z"
+                            fill="black" />
+                    </svg>
                     <div class="a">A</div>
                     <div class="clipone">
                         <div>
@@ -1155,6 +1256,12 @@
                 </div>
             </div>
             <div class="phones">
+                <svg class="star1" width="46" height="46" viewBox="0 0 46 46" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M40.9117 4.97056L25.8375 21.6408L45.3253 32.8369L24.8128 23.6519L20.1867 45.6456L22.5835 23.2988L0.236642 25.6956L22.2304 21.0695L13.0454 0.556969L24.2415 20.0448L40.9117 4.97056Z"
+                        fill="black" />
+                </svg>
                 <span class="curves">
                     <span class="curve"></span>
                     <span class="curve"></span>
@@ -1174,6 +1281,12 @@
         </div>
         <div class="features">
             <div class="feature1">
+                <svg class="star1" width="46" height="46" viewBox="0 0 46 46" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M40.9117 4.97056L25.8375 21.6408L45.3253 32.8369L24.8128 23.6519L20.1867 45.6456L22.5835 23.2988L0.236642 25.6956L22.2304 21.0695L13.0454 0.556969L24.2415 20.0448L40.9117 4.97056Z"
+                        fill="black" />
+                </svg>
                 <span class="curves">
                     <span class="curve"></span>
                     <span class="curve"></span>
@@ -1251,6 +1364,12 @@
                 </div>
             </div>
             <div class="advantage2">
+                <svg class="star2" width="62" height="58" viewBox="0 0 62 58" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M31 0L32.5047 29.9289L61.4338 22.1115L33.4347 32.7911L49.8091 57.8885L31 34.56L12.1909 57.8885L28.5653 32.7911L0.566191 22.1115L29.4953 29.9289L31 0Z"
+                        fill="black" />
+                </svg>
                 <span class="curves">
                     <span class="curve"></span>
                     <span class="curve"></span>
@@ -1263,6 +1382,12 @@
         </div>
         <div class="advantages">
             <div class="advantage3">
+                <svg class="star1" width="46" height="46" viewBox="0 0 46 46" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M40.9117 4.97056L25.8375 21.6408L45.3253 32.8369L24.8128 23.6519L20.1867 45.6456L22.5835 23.2988L0.236642 25.6956L22.2304 21.0695L13.0454 0.556969L24.2415 20.0448L40.9117 4.97056Z"
+                        fill="black" />
+                </svg>
                 <span class="curves">
                     <span class="curve"></span>
                     <span class="curve"></span>
@@ -1287,6 +1412,12 @@
                         mauris etiam odio. Duis tristique lacus, et blandit viverra nisl velit. Sed mattis rhoncus, diam
                         suspendisse sit nunc, gravida eu. Lectus eget eget ac dolor neque lorem sapien, suspendisse
                         aliquam.</p>
+                    <svg class="star2" width="62" height="58" viewBox="0 0 62 58" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M31 0L32.5047 29.9289L61.4338 22.1115L33.4347 32.7911L49.8091 57.8885L31 34.56L12.1909 57.8885L28.5653 32.7911L0.566191 22.1115L29.4953 29.9289L31 0Z"
+                            fill="black" />
+                    </svg>
                 </div>
             </div>
         </div>
@@ -1303,6 +1434,12 @@
                     <img src="Group 1000002331.svg" alt="photo">
                     <span class="red"></span>
                     <span class="yellow"></span>
+                    <svg class="star1" width="46" height="46" viewBox="0 0 46 46" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M40.9117 4.97056L25.8375 21.6408L45.3253 32.8369L24.8128 23.6519L20.1867 45.6456L22.5835 23.2988L0.236642 25.6956L22.2304 21.0695L13.0454 0.556969L24.2415 20.0448L40.9117 4.97056Z"
+                            fill="black" />
+                    </svg>
                 </div>
                 <div class="sec2">
                     <p>The Best Financial Accounting
@@ -1324,6 +1461,12 @@
             </div>
         </div>
         <div class="faq">
+            <svg class="star2" width="62" height="58" viewBox="0 0 62 58" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M31 0L32.5047 29.9289L61.4338 22.1115L33.4347 32.7911L49.8091 57.8885L31 34.56L12.1909 57.8885L28.5653 32.7911L0.566191 22.1115L29.4953 29.9289L31 0Z"
+                    fill="black" />
+            </svg>
             <h3>FAQ</h3>
             <h2>Frequently Asked Questions</h2>
             <div class="mainfaq">
@@ -1360,6 +1503,30 @@
             </div>
         </div>
         <div class="readytostart">
+            <svg class="star1" width="46" height="46" viewBox="0 0 46 46" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M40.9117 4.97056L25.8375 21.6408L45.3253 32.8369L24.8128 23.6519L20.1867 45.6456L22.5835 23.2988L0.236642 25.6956L22.2304 21.0695L13.0454 0.556969L24.2415 20.0448L40.9117 4.97056Z"
+                    fill="black" />
+            </svg>
+            <svg class="star2" width="62" height="58" viewBox="0 0 62 58" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M31 0L32.5047 29.9289L61.4338 22.1115L33.4347 32.7911L49.8091 57.8885L31 34.56L12.1909 57.8885L28.5653 32.7911L0.566191 22.1115L29.4953 29.9289L31 0Z"
+                    fill="black" />
+            </svg>
+            <svg class="star3" width="46" height="46" viewBox="0 0 46 46" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M40.9117 4.97056L25.8375 21.6408L45.3253 32.8369L24.8128 23.6519L20.1867 45.6456L22.5835 23.2988L0.236642 25.6956L22.2304 21.0695L13.0454 0.556969L24.2415 20.0448L40.9117 4.97056Z"
+                    fill="white" />
+            </svg>
+            <svg class="star4" width="62" height="58" viewBox="0 0 62 58" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M31 0L32.5047 29.9289L61.4338 22.1115L33.4347 32.7911L49.8091 57.8885L31 34.56L12.1909 57.8885L28.5653 32.7911L0.566191 22.1115L29.4953 29.9289L31 0Z"
+                    fill="white" />
+            </svg>
             <div class="sec1">
                 <h2>Ready To Get Started?</h2>
                 <p>Risus Habitant Leo Egestas Mauris Diam Eget Morbi Tempus
@@ -1453,7 +1620,20 @@
         <hr>
         <span class="copyright">Copyright 2022 uifry.com all rights reserved</span>
     </footer>
-    <script></script>
+    <script>
+        const btn=document.querySelector('.readytostart button');
+        btn.addEventListener('mouseover',()=>{
+            btn.style.backgroundColor="#f55";
+            btn.style.color="white";
+            btn.querySelector('path').style.transition="0.3s";
+            btn.querySelector('path').style.fill="white";
+        });
+        btn.addEventListener('mouseout',()=>{
+            btn.style.backgroundColor="white";
+            btn.style.color="black";
+            btn.querySelector('path').style.fill="black";
+        });
+    </script>
 </body>
 
 </html>
