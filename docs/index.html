@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel='icon' href="Frame.svg" type="image/x-icon">
+    <title>Uifry</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -729,6 +730,53 @@
             align-items: center; */
         }
 
+        .readytostart .red1 {
+            position: absolute;
+            width: 250px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #FF5555;
+            z-index: -1;
+            filter: blur(30px);
+            top: -75px;
+            left: -90px;
+        }
+
+        .readytostart .yellow1 {
+            position: absolute;
+            width: 250px;
+            height: 100px;
+            top: 30px;
+            left: -90px;
+            border-radius: 50%;
+            background-color: #ffe15d;
+            z-index: -2;
+            filter: blur(40px);
+        }
+
+        .readytostart .red2 {
+            position: absolute;
+            width: 100px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #FF5555;
+            filter: blur(50px);
+            z-index: 0;
+            bottom: 100px;
+            right: 50px;
+        }
+
+        .readytostart .yellow2 {
+            position: absolute;
+            width: 100px;
+            height: 200px;
+            bottom: 210px;
+            right: 50px;
+            border-radius: 50%;
+            background-color: #ffe15d;
+            filter: blur(50px);
+        }
+
         .readytostart .sec1 {
             position: absolute;
             top: 100px;
@@ -750,7 +798,7 @@
             position: absolute;
             top: 25px;
             right: 0px;
-            z-index: 1;
+            z-index: 3;
             /* display: n; */
         }
 
@@ -758,13 +806,14 @@
             position: absolute;
             top: 100px;
             right: 203px;
-            z-index: 1;
+            z-index: 3;
         }
 
         .readytostart img:nth-of-type(3) {
             position: absolute;
             top: 25px;
             right: 0px;
+            z-index: 2;
         }
 
         .readytostart button {
@@ -962,6 +1011,7 @@
         }
 
         .newsletter form button {
+            cursor: pointer;
             border: 0;
             width: 160px;
             height: 61px;
@@ -1335,6 +1385,10 @@
             <img src="2.svg" alt="phone">
             <img src="1.svg" alt="phone">
             <img src="3.svg" alt="phone">
+            <span class="red1"></span>
+            <span class="yellow1"></span>
+            <span class="red2"></span>
+            <span class="yellow2"></span>
         </div>
     </main>
     <footer>
