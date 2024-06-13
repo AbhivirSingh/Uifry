@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Clash Display';
+            src: url('ClashDisplay-Variable.ttf') format('truetype');
+            /* font-weight: 400;
+            font-style: normal; */
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: "Clash Display", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            background-color: rgba(255, 255, 255, 0.226);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 70%;
+            font-size: 20px;
+            margin: auto;
+            padding: 2rem 1rem;
+            gap: 2rem;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo sup {
+            font-size: 0.25rem;
+            font-weight: 600;
+            margin-top: 12px;
+            margin-left: 2px;
+        }
+
+        .logo span {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        nav {
+            flex-grow: 1;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav ul li {
+            cursor: pointer;
+            font-size: 1.25rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li:hover {
+            color: #f55;
+        }
+
+        nav ul li:first-child {
+            color: #f55;
+            font-weight: 900;
+        }
+
+        nav ul li:first-child:hover {
+            color: #ffb923;
+        }
+
+        header button {
+            color: white;
+            background-color: black;
+            border: none;
+            padding: 18px 38px;
+            border-radius: 4px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        header button:hover,
+        .getStarted:hover {
+            background-color: #f55;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            margin: 7.5rem auto;
+            margin-top: 0rem;
+            gap: 80px;
+        }
+
+        .hero .subhero {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero h2 {
+            font-weight: 900;
+            font-size: 3.85rem;
+            position: relative;
+            margin-bottom: 0;
+        }
+
+        .red {
+            position: absolute;
+            width: 300px;
+            height: 160px;
+            top: -1em;
+            left: 3em;
+            border-radius: 50%;
+            background-color: #FF5555;
+            z-index: -1;
+            filter: blur(45px);
+        }
+
+        .yellow {
+            position: absolute;
+            width: 300px;
+            height: 160px;
+            top: 0em;
+            left: 3em;
+            border-radius: 50%;
+            background-color: #ffe15d;
+            z-index: -2;
+            filter: blur(60px);
+        }
+
+        .jib {
+            font-size: 18px;
+            font-weight: 450;
+            color: #0006;
+            width: 620px;
+        }
+
+        .herobtns {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .getStarted {
+            color: white;
+            background-color: black;
+            border: none;
+            padding: 18px 38px;
+            border-radius: 4px;
+            font-family: "Clash Display", sans-serif;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .watch {
+            font-size: 20px;
+            font-weight: 500;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+        }
+
+        .clip {
+            margin-top: 4em;
+        }
+
+        .a {
+            position: relative;
+            font-size: 120px;
+            transform: rotate(-28deg);
+            top: 242.0312423706px;
+            right: 29px;
+            /* color: yellow; */
+            font-weight: 900;
+            width: min-content;
+            z-index: -999;
+        }
+
+        .clipone {
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+            color: #fff;
+            font-size: 0.75rem;
+            transform: rotate(-28deg);
+            width: max-content;
+            padding: 1.5rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+
+        .clipone div {
+            display: flex;
+            gap: 10px;
+        }
+
+        .clipone div div {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .clipone div div span:first-child {
+            font-weight: 600;
+        }
+
+        .clipone hr {
+            width: 40px;
+            transform: rotate(120deg);
+            color: #fff;
+            margin: 0;
+        }
+
+        .cliptwo {
+            display: flex;
+            justify-content: center;
+            transform: rotate(-45deg);
+            position: relative;
+            bottom: 89px;
+            left: 233px;
+            height: 0;
+            width: max-content;
+            height: auto;
+            padding: 28.33px 5.2rem;
+            z-index: -1;
+            padding-left: 0;
+            /* border-bottom: 81px solid #f55; */
+            background: #f55;
+            /* border-left: 60px solid transparent; */
+            /* border-right: 0px solid transparent; */
+            border-radius: 0.5rem 0.5rem 0.5rem 0;
+            font-size: 0.75rem;
+            color: #000;
+            /* transform: skewX(-20deg) skewY(-45deg); */
+            font-weight: 700;
+        }
+
+        .cliptwo::before {
+            position: absolute;
+            content: '';
+            left: -23px;
+            top: -2px;
+            background-color: #f55;
+            z-index: -2;
+            width: 60px;
+            height: 103.5%;
+            border-radius: 0.5rem 0.5rem 0;
+            /* height: 141.4%; */
+            /* transform: skewY(-25deg); */
+            transform: rotate(45deg) skew(20deg, -45deg);
+        }
+
+        .cliptwo p {
+            text-align: center;
+            height: auto;
+            margin: 0;
+        }
+
+        .clipthree {
+            padding-left: 40px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 72px;
+            width: 256px;
+            background-color: #f15252;
+            border-radius: 8px 8px 8px 4px;
+            position: relative;
+            top: -38.64063px;
+            left: 262px;
+            z-index: -2;
+        }
+
+        .clipthree img {
+            scale: 0.6;
+            border-right: 1px solid black;
+            border-left: 1px solid black;
+            padding: 30px;
+        }
+
+        .clipthree div div {
+            color: #000;
+            font-size: 12px;
+            font-weight: 700;
+            /* padding-right: 14px; */
+        }
+
+        .clipthree div div:nth-child(2) {
+            font-weight: 500;
+            font-size: 10px;
+        }
+
+        .phones {
+            height: 720px;
+            width: 760px;
+            position: relative;
+        }
+
+        .curves {
+            display: grid;
+            grid-template-rows: 40px 40px;
+            transform: rotate(45deg);
+            position: absolute;
+            bottom: 200px;
+            left: 0px;
+        }
+
+        .curve {
+            height: 383.17px;
+            width: 551.16px;
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+
+        .phone3 {
+            position: absolute;
+            bottom: -120px;
+            left: 100px;
+        }
+
+        .phone2 {
+            position: absolute;
+            bottom: 112px;
+            left: 35px;
+        }
+
+        .phone1 {
+            position: absolute;
+            bottom: 40px;
+            left: -140px;
+        }
+
+        .phones .red {
+            position: absolute;
+            width: 430px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: #FF5555;
+            z-index: -1;
+            filter: blur(40px);
+            transform: rotate(-27deg);
+            top: 400px;
+            left: 80px;
+        }
+
+        .features {
+            display: flex;
+            margin: 40px auto;
+            justify-content: space-between;
+            width: 75%;
+            gap: 40px;
+        }
+
+        .feature1 {
+            left: 150px;
+            /* display: flex;
+            justify-content: end; */
+            width: 50%;
+            position: relative;
+        }
+
+        .feature1 img {
+            position: relative;
+            left: 20px;
+            transform: rotate(15deg);
+        }
+
+        .feature1 .red {
+            position: absolute;
+            width: 350px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: #FF5555;
+            z-index: -1;
+            filter: blur(40px);
+            transform: rotate(10deg);
+            top: 170px;
+            left: 40px;
+        }
+
+        .feature1 .yellow {
+            position: absolute;
+            width: 350px;
+            height: 250px;
+            top: 80px;
+            left: 10px;
+            border-radius: 50%;
+            background-color: #ffe15d;
+            z-index: -2;
+            filter: blur(70px);
+            transform: rotate(10deg);
+        }
+
+        .feature2 {
+            position: relative;
+            padding-top: 6rem;
+            width: 40%;
+        }
+
+        .feature2 .heading,
+        .advantage1 .heading,
+        .advantage4 .heading {
+            margin-bottom: 1.5rem;
+        }
+
+        .feature2 .heading p:first-child,
+        .advantage1 .heading p:first-child,
+        .advantage4 .heading p:first-child {
+            letter-spacing: 3px;
+            font-size: 18px;
+            color: #FF5555;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .feature2 .heading p:nth-of-type(2),
+        .advantage1 .heading p:nth-of-type(2),
+        .advantage4 .heading p:nth-of-type(2) {
+            font-size: 48px;
+            font-weight: 900;
+            margin: 0;
+        }
+
+        .feature2 .content div,
+        .advantage1 .content div,
+        .advantage4 .content div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .feature2 .content div span,
+        .advantage1 .content div span,
+        .advantage4 .content div span {
+            list-style: none;
+            font-size: 1.25rem;
+            font-weight: 800;
+        }
+
+        .feature2 .content p,
+        .advantage1 .content p,
+        .advantage4 .content p {
+            color: #0008;
+            font-weight: 450;
+            line-height: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature2 .red {
+            position: absolute;
+            width: 175px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #FF5555;
+            z-index: -1;
+            filter: blur(30px);
+            transform: rotate(10deg);
+            top: 150px;
+            left: 115%;
+        }
+
+        .feature2 .yellow {
+            position: absolute;
+            width: 200px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ffe15d;
+            z-index: -2;
+            filter: blur(50px);
+            transform: rotate(10deg);
+            top: 220px;
+            left: 115%;
+        }
+
+        .advantages {
+            display: flex;
+            margin: 40px auto;
+            justify-content: space-between;
+            width: 60%;
+            gap: 40px;
+            position: relative;
+            height: max-content;
+        }
+        main .advantages:nth-child(2){
+            width: 70%
+        }
+
+        .advantage1,
+        .advantage4 {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center  ; */
+            position: relative;
+            padding-top: 6rem;
+            width: 40%;
+        }
+
+        .advantage1 .content div,
+        .advantage4 .content div {
+            padding-bottom: 0.5rem;
+        }
+
+        .advantage1 .content div span,
+        .advantage4 .content div span {
+            font-size: 1.75rem;
+            font-weight: 600;
+        }
+
+        .advantage2,
+        .advantage3 {
+            position: relative;
+            width: 50%;
+        }
+
+        .advantage2 img,
+        .advantage3 img {
+            position: relative;
+            left: 100px;
+        }
+
+        .advantage2 .red {
+            position: absolute;
+            width: 250px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #FF5555;
+            z-index: -1;
+            filter: blur(40px);
+            /* transform: rotate(10deg); */
+            top: 280px;
+            left: 40px;
+        }
+
+        .advantage2 .yellow {
+            position: absolute;
+            width: 250px;
+            height: 100px;
+            top: 370px;
+            left: 10px;
+            border-radius: 50%;
+            background-color: #ffe15d;
+            z-index: -2;
+            filter: blur(50px);
+            transform: rotate(-27deg);
+        }
+
+        .advantage3 .red {
+            position: absolute;
+            width: 350px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #FF5555;
+            z-index: -1;
+            filter: blur(40px);
+            top: 370px;
+            left: 120px;
+            transform: rotate(27deg);
+        }
+
+        .advantage3 .yellow {
+            position: absolute;
+            width: 350px;
+            height: 100px;
+            top: 320px;
+            left: 120px;
+            border-radius: 50%;
+            background-color: #ffe15d;
+            z-index: -2;
+            filter: blur(50px);
+        }
+        .advantage4{
+            padding-top: 12rem;
+        }
+        .testimonial {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px auto;
+            width: 80%;
+            height: 900px;
+        }
+
+        .testimonial p:first-child {
+            text-align: center;
+            font-weight: 450;
+            letter-spacing: 3px;
+            margin-bottom: 0;
+        }
+
+        .testimonial p:nth-child(2) {
+            margin: 0;
+            width: 400px;
+            text-align: center;
+            font-weight: 900;
+            font-size: 2.5rem;
+        }
+
+        .reviews {
+            width: 100%;
+            display: flex;
+            height: 727px;
+            justify-content: space-between;
+        }
+
+        .reviews .sec1{
+            position: relative;
+            width: 40%;
+        }
+        .reviews .sec1 img{
+            position: relative;
+            top:-388px;
+            left: 100px;
+        }
+        .reviews .sec1 .red{
+            top: 220px;
+            left: 200px;
+        }
+        .reviews .sec1 .yellow{
+            top: 270px;
+            left: 200px;
+        }
+        .reviews .sec2 {
+            letter-spacing: 0;
+            width: 40%;
+            padding: 9% 0;
+            padding-right: 9%;
+        }
+
+        .reviews .curves {
+            position: relative;
+            bottom: -120px;
+            left: 115px;
+            width: max-content;
+            height: max-content;
+            /* transform: rotate(90deg); */
+        }
+
+        .reviews .curve {
+            width: 542.07px;
+            height: 376.75px;
+            /* rotate: ; */
+        }
+
+        .reviews .sec1 svg {
+            position: relative;
+            bottom: 390px;
+            left: 100px;
+            width: max-content;
+            height: max-content;
+        }
+
+        .reviews .sec2 p:first-child {
+            font-weight: 650;
+            font-size: 1.5rem;
+            text-align: left;
+        }
+
+        .reviews .sec2 p:nth-of-type(2) {
+            line-height: 1.5rem;
+            font-weight: 450;
+            font-size: 1rem;
+            margin: 1rem 0;
+            width: auto;
+            color: #81848A;
+            text-align: left;
+        }
+
+        .people {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .sec2 p:last-child {
+            font-weight: 600;
+        }
+
+        .readytostart {
+            color: white;
+            background-color: black;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 70%;
+            margin: 100px auto;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        .subfooter {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+        }
+
+        .contact ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .contact ul li {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            gap: 10px;
+            margin: 0;
+        }
+
+        .links,
+        .legal,
+        .product,
+        .newsletter {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+        }
+
+        .links span,
+        .legal span,
+        .product span,
+        .newsletter span {
+            margin-bottom: 0;
+            font-weight: 500;
+            font-size: 2rem;
+        }
+
+        .links ul,
+        .legal ul,
+        .product ul,
+        .newsletter ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .links ul li,
+        .legal ul li,
+        .product ul li,
+        .newsletter ul li {
+            margin-bottom: 20px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .newsletter form {
+            background-color: #fff;
+            width: 340px;
+            height: 81px;
+            color: #81848A;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 10px 10px 300px -110px rgba(0, 0, 0, 1);
+        }
+
+        .newsletter form input {
+            height: 100%;
+            outline: none;
+            border: 0;
+            font-size: small;
+            transition: 0.3s;
+            text-align: center;
+            font-family: "Clash Display", sans-serif;
+            font-size: 1rem;
+        }
+
+        .newsletter form input::placeholder {
+            text-align: center;
+        }
+
+        .newsletter form button {
+            border: 0;
+            width: 160px;
+            height: 61px;
+            background-color: #000;
+            border-radius: 0.25rem;
+            color: #fff;
+            font-family: "Clash Display", sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        footer hr {
+            width: 70%;
+            height: 1px;
+            background-color: grey;
+            border: none;
+            background: linear-gradient(to right, white, black, white);
+        }
+
+        .copyright {
+            padding: 2rem 0;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M26.3829 10.8852C26.1564 10.6651 25.8387 10.5651 25.5277 10.6163C25.2162 10.6672 24.9472 10.8628 24.8027 11.1434C24.3057 12.1089 23.6745 12.9961 22.9318 13.7805C23.0058 13.2139 23.0431 12.6439 23.0431 12.0724C23.0431 10.9759 22.8961 9.84742 22.6061 8.71805C21.6527 5.00853 19.1525 1.87144 15.7468 0.111205C15.4503 -0.0419942 15.097 -0.0366153 14.8053 0.125549C14.5136 0.287779 14.3226 0.585213 14.2964 0.917908C14.0309 4.28895 12.2945 7.35586 9.52981 9.33424C9.49322 9.3606 9.4569 9.38729 9.42057 9.41386C9.34534 9.46891 9.27441 9.52097 9.20814 9.56467C9.19778 9.57157 9.18749 9.57861 9.17739 9.58585C7.43861 10.8308 6.00391 12.4903 5.0282 14.3854C4.03675 16.3131 3.53406 18.3818 3.53406 20.5336C3.53406 21.6299 3.68101 22.7583 3.97088 23.8879C5.50055 29.8417 10.8585 33.9999 17.0004 33.9999C24.4253 33.9999 30.4659 27.9589 30.4659 20.5336C30.4659 16.872 29.0159 13.4454 26.3829 10.8852Z"
+                    fill="#FF5555" />
+                <circle cx="16" cy="20" r="4" fill="white" />
+            </svg>
+            <span>uifry</span><sup>TM</sup>
+        </div>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Pricing</li>
+                <li>Features</li>
+            </ul>
+        </nav>
+        <button>Download</button>
+    </header>
+    <main>
+        <div class="hero">
+            <div class="subhero">
+                <h2>Make The <span class="red"></span><span class="yellow"></span>Best Financial Decisions</h2>
+                <p class="jib">Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu
+                    adipiscing sociis arcu lorem porttitor.</p>
+                <div class="herobtns">
+                    <button class="getStarted">Get Started &nbsp; <svg width="25" height="8" viewBox="0 0 25 8"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24.3536 4.35355C24.5488 4.15829 24.5488 3.84171 24.3536 3.64645L21.1716 0.464466C20.9763 0.269204 20.6597 0.269204 20.4645 0.464466C20.2692 0.659728 20.2692 0.976311 20.4645 1.17157L23.2929 4L20.4645 6.82843C20.2692 7.02369 20.2692 7.34027 20.4645 7.53553C20.6597 7.7308 20.9763 7.7308 21.1716 7.53553L24.3536 4.35355ZM0 4.5H24V3.5H0V4.5Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                    <div class="watch">
+                        <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="14.5" cy="14.5" r="14" stroke="black" />
+                            <path
+                                d="M11 19.0809V9.91907C11 9.52282 11.4389 9.28402 11.7716 9.49929L18.8512 14.0802C19.1557 14.2772 19.1557 14.7228 18.812 14.9198L11.7716 19.5007C11.4389 19.716 11 19.4772 11 19.0809Z"
+                                fill="black" stroke="black" />
+                        </svg>
+                        <span>Watch Video</span>
+                    </div>
+                </div>
+                <div class="clip">
+                    <div class="a">A</div>
+                    <div class="clipone">
+                        <div>
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_101_118)">
+                                    <path
+                                        d="M16.1407 17.7056C13.9751 17.7056 12.2195 15.9501 12.2195 13.7845V10.1538C12.2195 9.88336 12.2195 9.74813 12.2589 9.63984C12.325 9.45832 12.468 9.31532 12.6495 9.24925C12.7578 9.20984 12.893 9.20984 13.1635 9.20984L19.1178 9.20984C19.3883 9.20984 19.5235 9.20984 19.6318 9.24925C19.8133 9.31532 19.9563 9.45832 20.0224 9.63984C20.0618 9.74813 20.0618 9.88336 20.0618 10.1538V13.7845C20.0618 15.9501 18.3062 17.7056 16.1407 17.7056ZM16.1407 17.7056V19.6662M20.0618 10.5169H21.6956C22.0001 10.5169 22.1523 10.5169 22.2724 10.5666C22.4326 10.633 22.5598 10.7602 22.6261 10.9203C22.6759 11.0404 22.6759 11.1927 22.6759 11.4972V11.8239C22.6759 12.4317 22.6759 12.7356 22.6091 12.9849C22.4278 13.6615 21.8993 14.1899 21.2227 14.3712C20.9734 14.438 20.6695 14.438 20.0618 14.438M12.2195 10.5169H10.5857C10.2812 10.5169 10.129 10.5169 10.0089 10.5666C9.84874 10.633 9.72151 10.7602 9.65518 10.9203C9.60544 11.0404 9.60544 11.1927 9.60544 11.4972V11.8239C9.60544 12.4317 9.60544 12.7356 9.67224 12.9849C9.85353 13.6615 10.382 14.1899 11.0586 14.3712C11.3079 14.438 11.6118 14.438 12.2195 14.438M13.1635 22.2803H19.1178C19.2782 22.2803 19.4083 22.1502 19.4083 21.9898C19.4083 20.7065 18.3679 19.6662 17.0846 19.6662H15.1967C13.9134 19.6662 12.873 20.7065 12.873 21.9898C12.873 22.1502 13.0031 22.2803 13.1635 22.2803Z"
+                                        stroke="#FF5555" stroke-width="1.30704" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                                <circle cx="16.1407" cy="15.7454" r="15.3578" stroke="#FF5555"
+                                    stroke-width="0.653521" />
+                                <defs>
+                                    <clipPath id="clip0_101_118">
+                                        <rect width="15.6845" height="15.6845" fill="white"
+                                            transform="translate(8.29837 7.90283)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+
+                            <div>
+                                <span>Achievements</span>
+                                <span>Best Finance App on PlayStore</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div>
+                            <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.8735 14.6063L16.2397 14.6063C15.6983 14.6063 15.2595 15.0452 15.2595 15.5866C15.2595 16.1279 15.6983 16.5668 16.2397 16.5668H16.8933C17.4346 16.5668 17.8735 17.0057 17.8735 17.5471C17.8735 18.0885 17.4346 18.5274 16.8933 18.5274H15.2595M16.5665 13.9528V14.6063M16.5665 18.5274V19.1809M20.4876 16.5668H20.4942M12.6454 16.5668H12.6519M10.0313 14.0835L10.0313 19.0502C10.0313 19.7822 10.0313 20.1482 10.1737 20.4278C10.2991 20.6738 10.499 20.8737 10.7449 20.999C11.0245 21.1415 11.3905 21.1415 12.1225 21.1415L21.0104 21.1415C21.7425 21.1415 22.1085 21.1415 22.3881 20.999C22.634 20.8737 22.8339 20.6738 22.9592 20.4278C23.1017 20.1482 23.1017 19.7822 23.1017 19.0502V14.0835C23.1017 13.3514 23.1017 12.9854 22.9593 12.7058C22.8339 12.4599 22.634 12.26 22.3881 12.1346C22.1085 11.9922 21.7425 11.9922 21.0104 11.9922L12.1225 11.9922C11.3905 11.9922 11.0245 11.9922 10.7449 12.1346C10.499 12.26 10.2991 12.4599 10.1737 12.7058C10.0313 12.9854 10.0313 13.3514 10.0313 14.0835ZM20.8144 16.5668C20.8144 16.7473 20.6681 16.8936 20.4876 16.8936C20.3072 16.8936 20.1609 16.7473 20.1609 16.5668C20.1609 16.3864 20.3072 16.2401 20.4876 16.2401C20.6681 16.2401 20.8144 16.3864 20.8144 16.5668ZM12.9721 16.5668C12.9721 16.7473 12.8258 16.8936 12.6454 16.8936C12.4649 16.8936 12.3186 16.7473 12.3186 16.5668C12.3186 16.3864 12.4649 16.2401 12.6454 16.2401C12.8258 16.2401 12.9721 16.3864 12.9721 16.5668Z"
+                                    stroke="#FF5555" stroke-width="1.30704" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <circle cx="16.5666" cy="16.567" r="15.3578" stroke="#FF5555" stroke-width="0.653521" />
+                            </svg>
+
+                            <div>
+                                <span>Finance</span>
+                                <span>Most Popular Accounting App</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cliptwo">
+                        <p>Make The Best Financial Decisions</p>
+                    </div>
+                    <div class="clipthree">
+                        <svg width="2" height="73" viewBox="0 0 2 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.405579" y="0.960327" width="1.30704" height="71.2338" fill="black" />
+                        </svg>
+
+                        <svg width="41" height="38" viewBox="0 0 41 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20.8081 -0.00842285L21.7915 19.5508L40.6973 14.4419L22.3993 21.4212L33.1003 37.823L20.8081 22.5773L8.51596 37.823L19.217 21.4212L0.918985 14.4419L19.8248 19.5508L20.8081 -0.00842285Z"
+                                fill="black" />
+
+                        </svg>
+                        <svg width="2" height="73" viewBox="0 0 2 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.405579" y="0.960327" width="1.30704" height="71.2338" fill="black" />
+                        </svg>
+
+                        <div>
+                            <div>Uifry Premium</div>
+                            <div>Free Trial</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="phones">
+                <span class="curves">
+                    <span class="curve"></span>
+                    <span class="curve"></span>
+                    <span class="curve"></span>
+                </span>
+                <div class="phone3">
+                    <img src="iPhone-13-Pro-Front (1).svg" alt="iPhone">
+                </div>
+                <div class="phone2">
+                    <img src="Group 1000004719.svg" alt="iPhone">
+                </div>
+                <div class="phone1">
+                    <img src="iPhone-13-Pro-Front (1).svg" alt="iPhone">
+                </div>
+                <span class="red"></span>
+            </div>
+        </div>
+        <div class="features">
+            <div class="feature1">
+                <span class="curves">
+                    <span class="curve"></span>
+                    <span class="curve"></span>
+                    <span class="curve"></span>
+                </span>
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <img src="iPhone-13-Pro-Front (1).svg" alt="iPhone">
+            </div>
+            <div class="feature2">
+                <div class="heading">
+                    <p>FEATURES</p>
+                    <p>Uifry Premium</p>
+                </div>
+                <div class="content">
+                    <div>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2L10.6985 7.20599C10.4445 8.22185 10.3176 8.72978 10.0531 9.14309C9.81915 9.50868 9.50868 9.81915 9.14309 10.0531C8.72978 10.3176 8.22185 10.4445 7.20599 10.6985L2 12L7.20599 13.3015C8.22185 13.5555 8.72978 13.6824 9.14309 13.9469C9.50868 14.1808 9.81915 14.4913 10.0531 14.8569C10.3176 15.2702 10.4445 15.7782 10.6985 16.794L12 22L13.3015 16.794C13.5555 15.7782 13.6824 15.2702 13.9469 14.8569C14.1808 14.4913 14.4913 14.1808 14.8569 13.9469C15.2702 13.6824 15.7782 13.5555 16.794 13.3015L22 12L16.794 10.6985C15.7782 10.4445 15.2702 10.3176 14.8569 10.0531C14.4913 9.81915 14.1808 9.50868 13.9469 9.14309C13.6824 8.72978 13.5555 8.22185 13.3015 7.20599L12 2Z"
+                                stroke="#FF5555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <span>Budgeting Intervals</span>
+                    </div>
+                    <p>Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu
+                        adipiscing sociis arcu lorem porttitor.</p>
+                    <div>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2.50002V12M12 12L20.5 7.27773M12 12L3.5 7.27773M12 12V21.5M20.5 16.7222L12.777 12.4317C12.4934 12.2741 12.3516 12.1954 12.2015 12.1645C12.0685 12.1371 11.9315 12.1371 11.7986 12.1645C11.6484 12.1954 11.5066 12.2741 11.223 12.4317L3.5 16.7222M21 16.0586V7.94147C21 7.59883 21 7.4275 20.9495 7.27471C20.9049 7.13953 20.8318 7.01545 20.7354 6.91076C20.6263 6.79242 20.4766 6.70922 20.177 6.54282L12.777 2.43171C12.4934 2.27415 12.3516 2.19537 12.2015 2.16448C12.0685 2.13715 11.9315 2.13715 11.7986 2.16448C11.6484 2.19537 11.5066 2.27415 11.223 2.43171L3.82297 6.54282C3.52345 6.70922 3.37369 6.79242 3.26463 6.91076C3.16816 7.01545 3.09515 7.13953 3.05048 7.27471C3 7.42751 3 7.59883 3 7.94147V16.0586C3 16.4012 3 16.5725 3.05048 16.7253C3.09515 16.8605 3.16816 16.9846 3.26463 17.0893C3.37369 17.2076 3.52345 17.2908 3.82297 17.4572L11.223 21.5683C11.5066 21.7259 11.6484 21.8047 11.7986 21.8356C11.9315 21.8629 12.0685 21.8629 12.2015 21.8356C12.3516 21.8047 12.4934 21.7259 12.777 21.5683L20.177 17.4572C20.4766 17.2908 20.6263 17.2076 20.7354 17.0893C20.8318 16.9846 20.9049 16.8605 20.9495 16.7253C21 16.5725 21 16.4012 21 16.0586Z"
+                                stroke="#FF5555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <span>Budgeting Intervals</span>
+                    </div>
+                    <p>Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu
+                        adipiscing sociis arcu lorem porttitor.</p>
+                    <div>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20.5 16H8M8 16V3.5M8 16L3.5 20.5M3.5 8H16M16 8V20.5M16 8L20.5 3.5M21 15.3373V3.8C21 3.51997 21 3.37996 20.9455 3.273C20.8976 3.17892 20.8211 3.10243 20.727 3.0545C20.62 3 20.48 3 20.2 3H8.66274C8.41815 3 8.29586 3 8.18077 3.02763C8.07873 3.05213 7.98119 3.09253 7.89172 3.14736C7.7908 3.2092 7.70432 3.29568 7.53137 3.46863L3.46863 7.53137C3.29568 7.70432 3.2092 7.7908 3.14736 7.89172C3.09253 7.98119 3.05213 8.07873 3.02763 8.18077C3 8.29586 3 8.41815 3 8.66274V20.2C3 20.48 3 20.62 3.0545 20.727C3.10243 20.8211 3.17892 20.8976 3.273 20.9455C3.37996 21 3.51997 21 3.8 21H15.3373C15.5818 21 15.7041 21 15.8192 20.9724C15.9213 20.9479 16.0188 20.9075 16.1083 20.8526C16.2092 20.7908 16.2957 20.7043 16.4686 20.5314L20.5314 16.4686C20.7043 16.2957 20.7908 16.2092 20.8526 16.1083C20.9075 16.0188 20.9479 15.9213 20.9724 15.8192C21 15.7041 21 15.5818 21 15.3373Z"
+                                stroke="#FF5555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <span>Budgeting Intervals</span>
+                    </div>
+                    <p>Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu
+                        adipiscing sociis arcu lorem porttitor.</p>
+                </div>
+                <span class="red"></span>
+                <span class="yellow"></span>
+            </div>
+        </div>
+        <div class="advantages">
+            <div class="advantage1">
+                <div class="heading">
+                    <p>ADVANTAGES</p>
+                    <p>Why Choose Uifry?</p>
+                </div>
+                <div class="content">
+                    <div>
+                        <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24.488" r="24" fill="#FF5555" />
+                            <path
+                                d="M26 33.488H22M30 20.488C30 18.8967 29.3679 17.3706 28.2427 16.2454C27.1174 15.1202 25.5913 14.488 24 14.488C22.4087 14.488 20.8826 15.1202 19.7574 16.2454C18.6322 17.3706 18 18.8967 18 20.488C18 23.5782 17.2205 25.694 16.3497 27.0934C15.6151 28.2739 15.2479 28.8641 15.2613 29.0288C15.2763 29.2111 15.3149 29.2806 15.4618 29.3896C15.5945 29.488 16.1926 29.488 17.3889 29.488H30.6112C31.8074 29.488 32.4056 29.488 32.5382 29.3896C32.6852 29.2806 32.7238 29.2111 32.7387 29.0288C32.7522 28.8641 32.3849 28.2739 31.6504 27.0935C30.7795 25.694 30 23.5782 30 20.488Z"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <span>Clever Notifications</span>
+                    </div>
+                    <p>Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit
+                        mauris etiam odio. Duis tristique lacus, et blandit viverra nisl velit. Sed mattis rhoncus, diam
+                        suspendisse sit nunc, gravida eu. Lectus eget eget ac dolor neque lorem sapien, suspendisse
+                        aliquam.</p>
+                </div>
+            </div>
+            <div class="advantage2">
+                <span class="curves">
+                    <span class="curve"></span>
+                    <span class="curve"></span>
+                    <span class="curve"></span>
+                </span>
+                <span class="yellow"></span>
+                <span class="red"></span>
+                <img src="Group 1000004719 (1).svg" alt="iPhone">
+            </div>
+        </div>
+        <div class="advantages">
+            <div class="advantage3">
+                <span class="curves">
+                    <span class="curve"></span>
+                    <span class="curve"></span>
+                    <span class="curve"></span>
+                </span>
+                <span class="yellow"></span>
+                <span class="red"></span>
+                <img src="Group 1000004719 (2).svg" alt="iPhone">
+            </div>
+            <div class="advantage4">
+                <div class="content">
+                    <div>
+                        <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24.9761" r="24" fill="#FF5555" />
+                            <path
+                                d="M24 14.9761L22.6985 20.1821C22.4445 21.1979 22.3176 21.7059 22.0531 22.1192C21.8192 22.4848 21.5087 22.7952 21.1431 23.0292C20.7298 23.2936 20.2218 23.4206 19.206 23.6746L14 24.9761L19.206 26.2776C20.2218 26.5315 20.7298 26.6585 21.1431 26.923C21.5087 27.1569 21.8192 27.4674 22.0531 27.833C22.3176 28.2463 22.4445 28.7542 22.6985 29.7701L24 34.9761L25.3015 29.7701C25.5555 28.7542 25.6824 28.2463 25.9469 27.833C26.1808 27.4674 26.4913 27.1569 26.8569 26.923C27.2702 26.6585 27.7782 26.5315 28.794 26.2776L34 24.9761L28.794 23.6746C27.7782 23.4206 27.2702 23.2936 26.8569 23.0292C26.4913 22.7952 26.1808 22.4848 25.9469 22.1192C25.6824 21.7059 25.5555 21.1979 25.3015 20.1821L24 14.9761Z"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Fully Customizable</span>
+                    </div>
+                    <p>Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit
+                        mauris etiam odio. Duis tristique lacus, et blandit viverra nisl velit. Sed mattis rhoncus, diam
+                        suspendisse sit nunc, gravida eu. Lectus eget eget ac dolor neque lorem sapien, suspendisse
+                        aliquam.</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial">
+            <p>TESTIMONIAL</p>
+            <p>What Our Users Say About Us?</p>
+            <div class="reviews">
+                <div class="sec1">
+                    <span class="curves">
+                        <span class="curve"></span>
+                        <span class="curve"></span>
+                        <span class="curve"></span>
+                    </span>
+                    <img src="Group 1000002331.svg" alt="photo">
+                    <span class="red"></span>
+                    <span class="yellow"></span>
+                </div>
+                <div class="sec2">
+                    <p>The Best Financial Accounting
+                        App Ever!
+                    </p>
+                    <p>"Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit
+                        mauris etiam odio. Duis tristique lacus, et blandit viverra nisl velit. Sed mattis rhoncus, diam
+                        suspendisse sit nunc, gravida eu. Lectus eget eget ac dolor neque lorem sapien, suspendisse
+                        aliquam."</p>
+                    <div class="people">
+                        <img src="Group 28.svg" alt="photo">
+                        <img src="Group 27.svg" alt="photo">
+                        <img src="Group 29.svg" alt="photo">
+                        <img src="Group 30.svg" alt="photo">
+                        <img src="Group 31.svg" alt="photo">
+                    </div>
+                    <p>Nick Jonas</p>
+                </div>
+            </div>
+        </div>
+        <div class="faq"></div>
+        <div class="readytostart"></div>
+    </main>
+    <footer>
+        <div class="subfooter">
+            <div class="contact">
+                <div class="logo">
+                    <img src="https://financeapp-landing-page.vercel.app/assets/logo.png" alt="logo">
+                    <img src="https://financeapp-landing-page.vercel.app/assets/Vector.png" alt="uifry">
+                </div>
+                <ul>
+                    <li>
+                        <img src="https://financeapp-landing-page.vercel.app/assets/email.png" alt="email">
+                        <p>Help@Frybix.com</p>
+                    </li>
+                    <li>
+                        <img src="https://financeapp-landing-page.vercel.app/assets/phone.png" alt="phone">
+                        <p>+1234 456 678 89</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="links">
+                <span>Links</span>
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Bookings</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+            <div class="legal">
+                <span>Legal</span>
+                <ul>
+                    <li>Terms of Use</li>
+                    <li>Privacy Policy</li>
+                    <li>Cookie Policy</li>
+                </ul>
+            </div>
+            <div class="product">
+                <span>Product</span>
+                <ul>
+                    <li>Take Tour</li>
+                    <li>Live Chat</li>
+                    <li>Reviews</li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <span>Newsletter</span>
+                <ul>
+                    <li>Stay Up to Date</li>
+                </ul>
+                <form>
+                    <input type="email" placeholder="Your email">
+                    <button>Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <span class="copyright">Copyright 2022 uifry.com all rights reserved</span>
+    </footer>
+    <script></script>
+</body>
+
+</html>
