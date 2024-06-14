@@ -747,6 +747,31 @@ header button:hover,
     margin: 1.5rem 0;
 }
 
+.people div {
+    background-color: #fff8;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.people div img {
+    transition: 0.3s;
+    width: 30px;
+    height: 31px;
+    z-index: -1;
+    position: relative;
+}
+
+.people div .active {
+    width: 40px! important;
+    height: 41px! important;
+    z-index: 1! important;
+}
+
+.hoverpeople {
+    width: 35px! important;
+    height: 36px! important;
+}
+
 .sec2 p:last-child {
     font-weight: 600;
 }

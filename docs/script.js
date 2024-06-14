@@ -30,3 +30,32 @@ const media = () => {
     }
 };
 window.onload = media;
+
+// People
+const p = document.querySelectorAll('.people div');
+p.forEach((d) => {
+    d.addEventListener('mouseover', () => {
+        if (d.querySelector('img').classList.contains('active') === false) {
+            d.style.backgroundColor = 'rgb(255 255 255 / 30%)';
+            d.querySelector('img').classList.add('hoverpeople');
+        }
+    });
+});
+p.forEach((d) => {
+    d.addEventListener('click', () => {
+        console.log('hello');
+        if (d.querySelector('img').classList.contains('active') === false) {
+            d.parentElement.querySelector('.active').classList.remove('active');
+            d.querySelector('img').classList.remove('hoverpeople');
+            d.querySelector('img').classList.add('active');
+        }
+    });
+});
+p.forEach((d) => {
+    d.addEventListener('mouseout', () => {
+        if (d.querySelector('img').classList.contains('active') === false) {
+            d.style.backgroundColor = '#fff8';
+            d.querySelector('img').classList.remove('hoverpeople');
+        }
+    });
+});
